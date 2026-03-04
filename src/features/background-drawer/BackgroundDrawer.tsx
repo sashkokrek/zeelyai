@@ -1,4 +1,4 @@
-import { useId, useState } from "react";
+import React, { useId, useState } from "react";
 import { Textarea } from "@/components/ui/Textarea";
 import { cva } from "class-variance-authority";
 
@@ -311,7 +311,7 @@ export function BackgroundDrawer({
                       <Textarea
                         id={textareaId}
                         value={prompt}
-                        onChange={(event) => setPrompt(event.target.value)}
+                        onChange={(event: React.ChangeEvent<HTMLTextAreaElement>) => setPrompt(event.target.value)}
                         className="h-[132px] min-h-[132px] resize-none overflow-y-auto rounded-none border-0 bg-white px-4 py-4 text-[14px] font-medium leading-[1.4] text-black shadow-none focus-visible:ring-0 focus-visible:border-transparent"
                       />
 
